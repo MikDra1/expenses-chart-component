@@ -1,0 +1,240 @@
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+/*
+    Remove list styles (bullets/numbers)
+    in case you use it with normalize.css
+  */
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+:root {
+  /* ### Primary */
+
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+
+  /* ### Neutral */
+
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+.container {
+  background-color: var(--Cream);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  display: grid;
+  gap: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  --max-width: 600px;
+}
+
+.card__top {
+  background-color: var(--Soft-red);
+  padding: 25px;
+  color: var(--Very-pale-orange);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  max-width: var(--max-width);
+}
+
+.card__bottom {
+  background-color: var(--Very-pale-orange);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: var(--max-width);
+}
+
+.balance__div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.balance {
+  font-size: 16px;
+}
+
+.spend__amount {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.chart {
+  display: flex;
+  gap: 0.75rem;
+  align-items: end;
+  justify-content: space-around;
+  margin-block: 35px;
+  margin-top: 50px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  color: #777;
+  font-size: 16px;
+  position: relative;
+}
+
+.post {
+  width: 8vw;
+  height: 20%;
+  background-color: var(--Soft-red);
+  border-radius: 3px;
+  cursor: pointer;
+  max-width: calc(var(--max-width) / 10);
+}
+
+.spend {
+  position: absolute;
+  top: -2rem;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: black;
+  color: var(--Very-pale-orange);
+  display: none;
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--Cream);
+  padding-top: 35px;
+  font-size: 16px;
+  color: #777;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.total__text {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.total {
+  font-size: 28px;
+  font-weight: 500;
+  color: black;
+  line-height: 1;
+
+}
+
+.percentage {
+  margin-left: auto;
+  font-weight: bold;
+  color: black;
+}
+
+.from {
+  margin-left: auto;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  .post {
+    width: 3.5vw;
+    border-radius: 6px;
+  }
+  .chart {
+    gap: 1rem;
+    margin-top: 75px;
+  }
+
+  .footer {
+    align-items: end;
+    height: fit-content;
+  }
+
+  .card__bottom {
+    padding: 35px;
+  }
+
+  .total__text {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .total {
+    font-size: 42px;
+    font-weight: bold;
+    color: black;
+  }
+  .total__percentage {
+    margin-top: -100px;
+  }
+  .spend {
+    top: -2.5rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .post {
+    width: 2.8vw;
+    border-radius: 6px;
+  }
+}

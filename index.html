@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Expenses chart component - MikDra1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <section class="card__top">
+          <div class="balance__div">
+          <p class="balance">My balance</p>
+           <p class="spend__amount">$921.48</p>
+          </div>
+           <img src="images/logo.svg" alt="">
+        </section>
+        <section class="card__bottom">
+          <h1>Spending - Last 7 days</h1>
+
+          <div class="chart">
+            <div class="day">
+              <div class="post"></div>
+              <p>mon</p>
+              <p class="spend"></p>
+            </div>
+            <div class="day">
+              <div class="post"></div>
+              <p>tue</p>
+              <p class="spend"></p>
+            </div>
+            <div class="day">
+              <div class="post"></div>
+              <p>wed</p>
+              <p class="spend"></p>
+            </div>
+            <div class="day">
+              <div class="post"></div>
+              <p>thu</p>
+              <p class="spend"></p>
+            </div>
+            <div class="day">
+              <div class="post"></div>
+              <p>fri</p>
+              <p class="spend"></p>
+            </div>
+            <div class="day">
+              <div class="post"></div>
+              <p>sat</p>
+              <p class="spend"></p>
+            </div>
+            <div class="day">
+              <div class="post"></div>
+              <p>sun</p>
+              <p class="spend"></p>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div>
+              <p class="total__text">Total this month</p>
+              <h2 class="total">$478.33</h2>
+            </div>
+            <div class="total__percentage">
+              <p class="percentage">+2.4%</p>
+              <p class="from">from last month</p>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
